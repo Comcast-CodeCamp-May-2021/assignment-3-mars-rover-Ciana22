@@ -10,9 +10,9 @@ describe("Message class", function() {
     expect( function() { new Message();}).toThrow(new Error('Message name required.'));
   });
 
-  it("constructor sets name", function() {
-    let message = new Message('New message!');
-    expect(message.name).toEqual('New message!');
+  it("constructor sets message name", function() {
+    let message = new Message('Name!');
+    expect(message.name).toEqual('Name!');
   });
 
   it("contains a commands array passed into the constructor as 2nd argument", function() {
@@ -20,5 +20,5 @@ describe("Message class", function() {
     let message = new Message('Another message!', commands);
     expect(message.commands).toEqual(commands);
   });
-
+  
 });
